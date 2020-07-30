@@ -1,0 +1,79 @@
+
+<form [formGroup]="eventFormGroup">
+    <div class="p-3">
+        <div class="row no-gutteers mb-4">
+            <div class="col-8">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                Event Name
+                            </th>
+                            <th scope="col">
+                                Cost
+                            </th>
+                            <th scope="col">
+                                Number of Tickets
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let e of events">
+                            <td>{{e.Events}}</td>
+                            <td>${{e.Cost}}</td>
+                            <td>
+                                <input type="number" minlength="0" formControlName="noOfTickets"
+                                    (change)="onTicketChange(e, $event.target)">
+                            </td>
+                        </tr>
+                        <tr *ngIf="totalPrice">
+                            <td colspan="2">Total Price</td>
+                            <td>${{ totalPrice }}</td>
+                        </tr>
+                        <tr *ngIf="discountedPrice">
+                            <td colspan="2">Discounted Price</td>
+                            <td>${{ discountedPrice }}</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="row no-gutteers">
+            <div class="col-8">
+                <button type="button" (click)="fetchPromotion()">
+                    Find Promotion</button>
+            </div>           
+        </div>
+        <div class="row no-gutteers" *ngIf="appliedPromotions.length > 0 ">
+            <div class="col-8">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                Available Promotion
+                            </th>
+                            <th scope="col">
+                                Total Discount
+                            </th>
+                            <th></th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let ap of appliedPromotions">
+                            <td>{{ap.PromotionText}}</td>
+                            <td>${{ap.CalculatedDiscount}}</td>
+                            <td> <button type="button" (click)="togglePromotion(ap,$event.target)">
+                                    Apply</button></td>
+                           
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</form>

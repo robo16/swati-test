@@ -1,0 +1,35 @@
+[
+    {
+      "EventID": "0",
+      "NumberOfEvents": 5,
+      "FreeEvent": 0,
+      "DiscountPercent": 20,
+      "DiscountAmount": 0,
+      "PromotionText" : "Buy 5, Get 20% off the 5th experience"
+    },
+    {
+      "EventID": "3",
+      "NumberOfEvents": 2,
+      "FreeEvent": 0,
+      "DiscountPercent": 0,
+      "DiscountAmount": 100,
+      "PromotionText" : "Team Buildings - Buy 2 for $1500"
+    },
+    {
+      "EventID": "2,4",
+      "NumberOfEvents": 4,
+      "FreeEvent": 1,
+      "DiscountPercent": 0,
+      "DiscountAmount": 0,
+      "PromotionText" : "Wine Tours and Picnics - Buy 4, ONLY Pay for 3"      
+    },
+    {
+      "EventID": "4",
+      "NumberOfEvents": 3,
+      "FreeEvent": 1,
+      "DiscountPercent": 0,
+      "DiscountAmount": 0,
+      "PromotionText" : "Picnics - Buy 2, get 1 free"      
+    }
+  ]
+  

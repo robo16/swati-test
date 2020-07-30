@@ -1,0 +1,27 @@
+[
+    {
+      "EventID": 1,
+      "Events": "Kids Party",
+      "Cost": 220,
+      "Number": 0
+    },
+    {
+      "EventID": 2,
+      "Events": "Wine Tour",
+      "Cost": 440,
+      "Number": 0
+    },
+    {
+      "EventID": 3,
+      "Events": "Team Building",
+      "Cost": 800,
+      "Number": 0
+    },
+    {
+      "EventID": 4,
+      "Events": "Picnic",
+      "Cost": 110,
+      "Number": 0
+    }
+  ]
+  
